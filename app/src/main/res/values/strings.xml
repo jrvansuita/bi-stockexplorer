@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Estoque Boutique Infantil</string>
+    <string name="inc">Entrada</string>
+    <string name="dec">Saída</string>
+    <string name="enter">Entrar</string>
+    <string name="search">Buscar</string>
+    <string name="cam_scan">Scanear</string>
+    <string name="search_product">Buscar Produto</string>
+    <string name="product_code">Código do Produto</string>
+    <string name="loading">Carregando...</string>
+
+    <string name="reported_sucessfuly">O produto %s será verificado.</string>
+
+    <string name="invalid_search">Nenhum produto foi encontrado para a pesquisa %s.</string>
+    <string name="searching_product">Buscando produto...</string>
+    <string name="initial_stock">Estoque Inicial</string>
+    <string name="no_internet">Sem conexão com a internet :(</string>
+    <string name="cost_price">Preço de Custo</string>
+    <string name="from_price">Preço De</string>
+    <string name="to_price">Preço Por</string>
+    <string name="markup">Markup</string>
+    <string name="sku_group">Grupo SKU</string>
+    <string name="situacao">Situação</string>
+    <string name="cons">Começe consultando um produto.</string>
+
+    <string name="stored_local">Localização</string>
+    <string name="price">Preço</string>
+    <string name="new_stored_local">Nova Localização</string>
+    <string name="new_price">Novo Preço</string>
+    <string name="new_stock_row">Adicionar estoque</string>
+    <string name="update">Atualizar</string>
+    <string name="ean">Ean</string>
+    <string name="last_buy">Última Compra</string>
+    <string name="service_name">Refresh Products Server</string>
+    <string name="cant_variant">Não é possível consultar o produto %s, porque não é uma variação.</string>
+
+    <string name="eccosys_url">https://boutiqueinfantil.eccosys.com.br/</string>
+    <string name="site_url">https://www.boutiqueinfantil.com.br/</string>
+
+    <string name="hawk_url">https://hawk.boutiqueinfantil.com.br/</string>
+
+
+
+    <string name="links_problem">Não foi possível atualizar os links dos produtos.</string>
+    <string name="report">Reportar problema</string>
+    <string name="erro_todo_list">A lista \"A Fazer\" não foi encontrada no board \"Operacional\".</string>
+    <string name="already_reported">O produto %s já foi reportado anteriormente.</string>
+    <string name="reserved">Reservado</string>
+    <string name="show_product_pattern">Sua busca não retornou resultados.</string>
+    <string name="cant_update">Não foi possível atualizar o produto %s, tente novamente mais tarde.</string>
+    <string name="fisic_stock">Estoque Físico</string>
+    <string name="available_stock">Estoque Disponível</string>
+    <string name="reserved_stock">Estoque Reservado</string>
+    <string name="user">Nome de usuário</string>
+    <string name="user_code">Código de usuário</string>
+    <string name="pass">Senha</string>
+    <string name="user_not">Usuário não informado.</string>
+    <string name="pass_not">Senha não informada.</string>
+    <string name="user_incorrect">Código de usuário incorreto</string>
+    <string name="login_invalid">Login inválido nesse momento</string>
+    <string name="user_not_active">Usuário não está ativo</string>
+
+
+    <string name="card_title">Inconsistência de Produtos</string>
+    <string name="desc_card">Este card foi criado automaticamente pelo aplicativo de inspeção de estoque. Os produtos abaixo possuem inconsistências.</string>
+
+    <string name="no_fix">Nenhum problema foi encontrado</string>
+
+</resources>

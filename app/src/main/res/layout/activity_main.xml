@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fillViewport="true">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
+            <me.dm7.barcodescanner.zxing.ZXingScannerView
+                android:id="@+id/scanner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/color_effect"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.30"
+                android:visibility="invisible" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="0.70"
+                app:contentPadding="5dp">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <include layout="@layout/progress_layout" />
+
+
+                    <LinearLayout
+                        android:id="@+id/info_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.40"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Código Sku" />
+
+                                <TextView
+                                    android:id="@+id/sku"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/selectableItemBackgroundBorderless" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cor" />
+
+                                <TextView
+                                    android:id="@+id/color"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.175"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tamanho" />
+
+                                <TextView
+                                    android:id="@+id/size"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.175"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="0dp"
+                                    android:text="@string/situacao" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/status"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="2dp"
+                                        android:background="?attr/selectableItemBackgroundBorderless"
+                                        android:scaleType="centerInside" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:lines="1"
+                                    android:paddingTop="10dp"
+                                    android:ellipsize="end"
+
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line">
+
+                            <LinearLayout
+                                android:id="@+id/stored_local_holder"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/stored_local" />
+
+                                <TextView
+                                    android:id="@+id/stored_local"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/selectableItemBackgroundBorderless" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/right_and_left_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ean" />
+
+                                <TextView
+                                    android:id="@+id/ean"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Marca" />
+
+                                <TextView
+                                    android:id="@+id/brand"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fisic_stock" />
+
+                                <TextView
+                                    android:id="@+id/fisic_stock"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/selectableItemBackgroundBorderless" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".33"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/available_stock" />
+
+                                <TextView
+                                    android:id="@+id/available_stock"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/reserved_stock" />
+
+                                <TextView
+                                    android:id="@+id/reserved_stock"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_line">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cost_price" />
+
+                                <TextView
+                                    android:id="@+id/price_cost"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/from_price" />
+
+                                <TextView
+                                    android:id="@+id/from_price"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/price"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/right_line"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:text="@string/to_price" />
+
+                                <TextView
+                                    android:id="@+id/to_price"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.25"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/markup" />
+
+                                <TextView
+                                    android:id="@+id/markup"
+                                    style="@style/featured_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/right_line">
+
+                                <ImageView
+                                    android:id="@+id/image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:padding="2dp"
+                                    android:scaleType="centerInside" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:columnCount="2"
+                                android:orientation="vertical"
+                                android:rowCount="3">
+
+                                <TextView
+                                    style="@style/featured_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sku_group" />
+
+
+                                <GridLayout
+                                    android:id="@+id/family_view"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:columnCount="2"
+                                    android:orientation="vertical"
+                                    android:rowCount="3">
+
+
+
+                                </GridLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</ScrollView>
