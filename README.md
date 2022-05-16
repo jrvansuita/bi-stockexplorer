@@ -1,4 +1,4 @@
-### Stock Explorer  ![](https://img.shields.io/badge/Boutique%20Infantil-Legacy-green.svg?)
+## Stock Explorer  ![](https://img.shields.io/badge/Boutique%20Infantil-Legacy-green.svg?)
 
 
 Just publishing here on github a good android app used on a former company that I owned. Maybe the source code can help on my futures projects.
